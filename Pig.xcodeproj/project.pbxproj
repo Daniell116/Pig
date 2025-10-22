@@ -6,8 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8FDFFAEE2EA930EB00D5309B /* pips 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAEC2EA930EB00D5309B /* pips 6.png */; };
+		8FDFFAEF2EA930EB00D5309B /* pips 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAEA2EA930EB00D5309B /* pips 4.png */; };
+		8FDFFAF02EA930EB00D5309B /* pips 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAE82EA930EB00D5309B /* pips 2.png */; };
+		8FDFFAF12EA930EB00D5309B /* Pig.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAE52EA930EB00D5309B /* Pig.png */; };
+		8FDFFAF22EA930EB00D5309B /* pips 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAE72EA930EB00D5309B /* pips 1.png */; };
+		8FDFFAF32EA930EB00D5309B /* pips 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAEB2EA930EB00D5309B /* pips 5.png */; };
+		8FDFFAF42EA930EB00D5309B /* pips 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAE62EA930EB00D5309B /* pips 0.png */; };
+		8FDFFAF52EA930EB00D5309B /* pips 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FDFFAE92EA930EB00D5309B /* pips 3.png */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8FDFFAC32EA92F5000D5309B /* Pig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pig.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDFFAE52EA930EB00D5309B /* Pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pig.png; sourceTree = "<group>"; };
+		8FDFFAE62EA930EB00D5309B /* pips 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pips 0.png"; sourceTree = "<group>"; };
+		8FDFFAE72EA930EB00D5309B /* pips 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pips 1.png"; sourceTree = "<group>"; };
+		8FDFFAE82EA930EB00D5309B /* pips 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pips 2.png"; sourceTree = "<group>"; };
+		8FDFFAE92EA930EB00D5309B /* pips 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pips 3.png"; sourceTree = "<group>"; };
+		8FDFFAEA2EA930EB00D5309B /* pips 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pips 4.png"; sourceTree = "<group>"; };
+		8FDFFAEB2EA930EB00D5309B /* pips 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pips 5.png"; sourceTree = "<group>"; };
+		8FDFFAEC2EA930EB00D5309B /* pips 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pips 6.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +51,7 @@
 		8FDFFABA2EA92F5000D5309B = {
 			isa = PBXGroup;
 			children = (
+				8FDFFAED2EA930EB00D5309B /* Pig Images */,
 				8FDFFAC52EA92F5000D5309B /* Pig */,
 				8FDFFAC42EA92F5000D5309B /* Products */,
 			);
@@ -43,6 +63,21 @@
 				8FDFFAC32EA92F5000D5309B /* Pig.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8FDFFAED2EA930EB00D5309B /* Pig Images */ = {
+			isa = PBXGroup;
+			children = (
+				8FDFFAE52EA930EB00D5309B /* Pig.png */,
+				8FDFFAE62EA930EB00D5309B /* pips 0.png */,
+				8FDFFAE72EA930EB00D5309B /* pips 1.png */,
+				8FDFFAE82EA930EB00D5309B /* pips 2.png */,
+				8FDFFAE92EA930EB00D5309B /* pips 3.png */,
+				8FDFFAEA2EA930EB00D5309B /* pips 4.png */,
+				8FDFFAEB2EA930EB00D5309B /* pips 5.png */,
+				8FDFFAEC2EA930EB00D5309B /* pips 6.png */,
+			);
+			path = "Pig Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +144,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FDFFAEE2EA930EB00D5309B /* pips 6.png in Resources */,
+				8FDFFAEF2EA930EB00D5309B /* pips 4.png in Resources */,
+				8FDFFAF02EA930EB00D5309B /* pips 2.png in Resources */,
+				8FDFFAF12EA930EB00D5309B /* Pig.png in Resources */,
+				8FDFFAF22EA930EB00D5309B /* pips 1.png in Resources */,
+				8FDFFAF32EA930EB00D5309B /* pips 5.png in Resources */,
+				8FDFFAF42EA930EB00D5309B /* pips 0.png in Resources */,
+				8FDFFAF52EA930EB00D5309B /* pips 3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
