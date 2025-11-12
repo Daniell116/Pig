@@ -14,8 +14,8 @@ struct ContentView: View {
     @State private var rotation = 0.0
     @State private var gameOver = false
     var body: some View {
-        NavigationView{
-            ZStack{
+        NavigationView {
+            ZStack {
                 Color.gray.opacity(0.7).ignoresSafeArea()
                 VStack {
                     Image("Pig").resizable().frame(width: 150, height: 150)
@@ -26,20 +26,21 @@ struct ContentView: View {
                         .rotationEffect(.degrees(rotation))
                         .rotation3DEffect(.degrees(rotation), axis: ( x: 1, y: 1, z: 0))
                         .padding(50)
-                    CustomText(text: "Turn Score: \(turnScore)")
-                    HStack{
-                        Button("Roll"){
-                            chooseRandom(times: 3)
-                            withAnimation(.interpolatingSpring(stiffness: 10, damping: 2)){
+                    CustomText(text: "turnScore: \(turnScore)")
+                    
+                    HStack {
+                        Button("Roll") {
+                            choseRandom(times: 3)
+                            withAnimation(.interpolatingSpring(stiffness: 10, damping: 2)) {
                                 rotation += 360
                             }
                         }
-                        
                         .buttonStyle(CustomButtonStyle())
-                        Button("Hold"){
+                        
+                        Button("Hold") {
                             gameScore += turnScore
-                            endTurn( )
-                            withAnimation(.easeInOut(duration: 1)){
+                            endTurn()
+                            withAnimation(.easeInOut(duration: 1)) {
                                 rotation += 360
                             }
                             if gameScore >= 100 {
@@ -48,56 +49,63 @@ struct ContentView: View {
                         }
                         .buttonStyle(CustomButtonStyle())
                     }
-                    CustomText(text: "Game Score: \(gameScore)")
+                    CustomText(text: "gameScore: \(gameScore)")
                     NavigationLink("How to Play", destination: InstructionsView())
                         .font(Font.custom("Marker Felt", size: 24))
                         .padding()
-                    
-                    Button("Reset"){
+                    Button("Reset") {
                         endTurn()
                         gameScore = 0
                     }
                     .font(Font.custom("Marker Felt", size: 24))
+                    .padding()
                 }
-                // end of ZStack
             }
-            Spacer()
-                .alert(isPresented: $gameOver, content: {
-                    Alert(title: Text("You won the game!"), dismissButton: .destructive(Text("Play again?"), action: { withAnimation {
-                        gameScore = 0
-                        gameOver = false
-                    }
-                    }))
-                })
-        }
+            
+            .alert(isPresented: $gameOver, content: {
+                Alert(title: Text("You won the game!"), dismissButton:
+                        .destructive(Text("Play again?"), action: {
+                            withAnimation {
+                                gameScore = 0
+                                gameOver = false
+                            }
+                        }))
+                    })
+            }
     }
-    func endTurn() {
+    
+    
+    func endTurn () {
         turnScore = 0
         randomValue = 0
     }
-    func chooseRandom(times: Int){
-        if times > 0{
+    func choseRandom(times: Int) {
+        if times > 0 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 randomValue = Int.random(in: 1...6)
-                chooseRandom(times: times - 1)
+                choseRandom(times: times - 1)
             }
         }
-        if times == 0{
-            if randomValue == 1{
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+        if times == 0 {
+            if randomValue == 1 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     endTurn()
                 }
             }
-        }
-        else {
-            turnScore += randomValue
+            else {
+                turnScore += randomValue
+            }
         }
     }
-    // End of ContentView
+    // end of Content View
 }
-struct CustomText: View{
+
+#Preview {
+    ContentView()
+}
+struct CustomText: View {
     let text: String
-    var body: some View{
+    var body: some View {
         Text(text).font(Font.custom("Marker Felt", size: 36))
     }
 }
@@ -135,8 +143,4 @@ struct InstructionsView: View {
             }
         }
     }
-}
-
-#Preview {
-    ContentView()
 }
