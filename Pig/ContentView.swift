@@ -26,8 +26,7 @@ struct ContentView: View {
                         .rotationEffect(.degrees(rotation))
                         .rotation3DEffect(.degrees(rotation), axis: ( x: 1, y: 1, z: 0))
                         .padding(50)
-                    CustomText(text: "turnScore: \(turnScore)")
-                    
+                    CustomText(text: "turn Score: \(turnScore)")
                     HStack {
                         Button("Roll") {
                             choseRandom(times: 3)
@@ -36,7 +35,6 @@ struct ContentView: View {
                             }
                         }
                         .buttonStyle(CustomButtonStyle())
-                        
                         Button("Hold") {
                             gameScore += turnScore
                             endTurn()
@@ -49,7 +47,7 @@ struct ContentView: View {
                         }
                         .buttonStyle(CustomButtonStyle())
                     }
-                    CustomText(text: "gameScore: \(gameScore)")
+                    CustomText(text: "game Score: \(gameScore)")
                     NavigationLink("How to Play", destination: InstructionsView())
                         .font(Font.custom("Marker Felt", size: 24))
                         .padding()
@@ -58,10 +56,9 @@ struct ContentView: View {
                         gameScore = 0
                     }
                     .font(Font.custom("Marker Felt", size: 24))
-                    .padding()
+            .padding()
                 }
             }
-            
             .alert(isPresented: $gameOver, content: {
                 Alert(title: Text("You won the game!"), dismissButton:
                         .destructive(Text("Play again?"), action: {
@@ -73,8 +70,6 @@ struct ContentView: View {
                     })
             }
     }
-    
-    
     func endTurn () {
         turnScore = 0
         randomValue = 0
@@ -99,7 +94,6 @@ struct ContentView: View {
     }
     // end of Content View
 }
-
 #Preview {
     ContentView()
 }
